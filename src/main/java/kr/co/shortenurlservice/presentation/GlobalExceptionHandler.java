@@ -22,7 +22,6 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(NotFoundShortenUrlException.class)
     public ResponseEntity<String> handleNotFoundShortenUrlException(NotFoundShortenUrlException ex) {
-        log.info("단축 URL을 찾지 못했습니다. {}", ex.getMessage());
         return new ResponseEntity<>("단축 URL을 찾지 못했습니다.", HttpStatus.NOT_FOUND);
 
     }
